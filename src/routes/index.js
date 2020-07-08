@@ -35,10 +35,14 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={({ route }) => ({
+        screenOptions={({ route, navigation }) => ({
           tabBarIcon: ({ color, size }) => {
             if (route.name === 'Pay') {
-              return <PayButton />;
+              return (
+                <PayButton 
+                  onPress={() => navigation.navigate('Pay')} 
+                />
+              )
             }
             const { lib: Icon, name } = icons[route.name];
 
