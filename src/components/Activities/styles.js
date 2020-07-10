@@ -36,3 +36,57 @@ export const Description = styled.Text`
 export const Bold = styled.Text`
   font-weight: bold;
 `;
+
+export const CardBody = styled.View`
+  margin-top: 20px;
+`;
+
+export const UserName = styled.Text`
+  color: #fff;
+  font-size: 20px;
+`;
+
+export const CardFooter = styled.View`
+  margin-top: 16px;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const Details = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const Value = styled.Text`
+  color: #f75175;
+  font-size: 14px;
+  font-weight: bold;
+`;
+
+export const Divider = styled.View`
+  width: 2px;
+  height: 13px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 8px;
+`;
+
+export const Date = styled.Text`
+  color: #fff;
+  margin-left: 5px;
+`;
+
+export const Actions = styled.View`
+  flex-direction: row;
+`;
+
+export const Option = styled.TouchableOpacity`
+  margin-left: 16px;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const OptionLabel = styled.Text`
+  color: #fff;
+  font-size: 14px;
+  margin-left: 6px;
+`;
