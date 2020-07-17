@@ -46,7 +46,7 @@ export default function Tips() {
     <Container>
       {items.map((item) => (
         <Option key={item.key} bgColor={item.bgColor}>
-        <Title>{item.Title}</Title>
+        <Title>{item.title}</Title>
 
         <Img source={item.img} />
       </Option>
