@@ -1,5 +1,8 @@
 import React from 'react';
+import { Switch } from 'react-native';
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
+
+import creditCard from '../../images/credit-card.png';
 
 import {
   Container, 
@@ -14,6 +17,18 @@ import {
   Actions,
   Action,
   ActionLabel,
+  UseBalance,
+  UseBalanceTitle,
+  PaymentMethods,
+  PaymentMethodsTitle,
+  Card,
+  CardBody,
+  CardDetails,
+  CardTitle,
+  CardInfo,
+  Img,
+  AddContainer,
+  AddLabel,
 } from './styles';
  
 export default function Wallet() {
@@ -50,6 +65,38 @@ export default function Wallet() {
           </Actions>
         </HeaderContainer>
       </Header>
+
+      <UseBalance>
+        <UseBalanceTitle>Usar saldo ao pagar</UseBalanceTitle>
+
+        <Switch />
+      </UseBalance>
+
+      <PaymentMethods>
+        <PaymentMethodsTitle>Formas de pagamento</PaymentMethodsTitle>
+
+        <Card>
+          <CardBody>
+            <CardDetails>
+              <CardTitle>
+                Cadastre seu cartão de crédito
+              </CardTitle>
+
+              <CardInfo>
+                Cadastre seu cartão de crédito para poder fazer pagamentos
+                mesmo quando não tiver saldo no seu PicPay.
+              </CardInfo>
+            </CardDetails>
+
+            <Img source={creditCard} resizeMode="contain" />
+          </CardBody>
+
+          <AddContainer>
+            <Feather name="plus-circle" size={30} color="#0db060" />
+            <AddLabel>Adicionar cartão de crédito</AddLabel>
+          </AddContainer>
+        </Card>
+      </PaymentMethods>
     </Container>
   )
 }
