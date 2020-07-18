@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Switch } from 'react-native';
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
 
@@ -34,6 +34,12 @@ import {
 } from './styles';
  
 export default function Wallet() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  function handleToggleVisibility() {
+    setIsVisible((prevState) => !prevState);
+  }
+
   return (
     <Container>
       <Header colors={['#00ac4a', '#4caf50']}>
@@ -42,11 +48,11 @@ export default function Wallet() {
 
           <BalanceContainer>
             <Value>
-              R$ <Bold>125.464,90</Bold>
+              R$ <Bold>{isVisible ? '125.464,90' : '-----'}</Bold>
             </Value>
 
-            <EyeButton>
-              <Feather name="eye" size={28} color="#fff" />
+            <EyeButton onPress={handleToggleVisibility}>
+              <Feather name={isVisible ? 'eye' : 'eye-off'} size={28} color="#fff" />
             </EyeButton>
           </BalanceContainer>
 
