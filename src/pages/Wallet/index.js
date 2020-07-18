@@ -29,6 +29,8 @@ import {
   Img,
   AddContainer,
   AddLabel,
+  TicketContainer,
+  TicketLabel,
 } from './styles';
  
 export default function Wallet() {
@@ -95,7 +97,13 @@ export default function Wallet() {
             <Feather name="plus-circle" size={30} color="#0db060" />
             <AddLabel>Adicionar cartão de crédito</AddLabel>
           </AddContainer>
+
         </Card>
+
+        <TicketContainer>
+          <MaterialCommunityIcons name="ticket-outline" size={30} color="#0db060" />
+          <TicketLabel>Usar código promocional</TicketLabel>
+        </TicketContainer>
       </PaymentMethods>
     </Container>
   )

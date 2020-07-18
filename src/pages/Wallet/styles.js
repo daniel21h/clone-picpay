@@ -147,3 +147,18 @@ export const AddLabel = styled.Text`
   margin-left: 15px;
 `;
 
+export const TicketContainer = styled.TouchableOpacity`
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+`;
+
+export const TicketLabel = styled.Text`
+  color: #0db060;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 15px;
+`;
+
+
